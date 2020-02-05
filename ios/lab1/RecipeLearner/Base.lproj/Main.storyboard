@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="RecipeLearner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="La7-My-Hap">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="eXi-YS-ulm"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="5VQ-gH-n4B"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food of Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spf-cq-GkS">
+                                <rect key="frame" x="148.5" y="624" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Spf-cq-GkS" firstAttribute="top" secondItem="La7-My-Hap" secondAttribute="bottom" constant="68" id="4Lx-zz-EJg"/>
+                            <constraint firstItem="La7-My-Hap" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="Imz-ky-5Pm"/>
+                            <constraint firstItem="Spf-cq-GkS" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Knu-nu-f4f"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="La7-My-Hap" secondAttribute="trailing" id="UHE-xc-KDa"/>
+                            <constraint firstItem="La7-My-Hap" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="UQp-06-QBd"/>
+                            <constraint firstItem="La7-My-Hap" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="wFa-2z-vmx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Food" image="bowl" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="foodLabel" destination="Spf-cq-GkS" id="u06-Sf-CON"/>
+                        <outlet property="foodPicker" destination="La7-My-Hap" id="IpD-T9-wO2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="FmF-KC-kRC">
+            <objects>
+                <viewController id="SKt-gB-4Ui" customClass="ThirdViewController" customModule="RecipeLearner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mlu-Iq-OxU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a Recording for Instructions Later" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzQ-QY-OIr">
+                                <rect key="frame" x="24" y="104" width="370" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soh-lm-rWz">
+                                <rect key="frame" x="182.5" y="323" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="Record:" destination="SKt-gB-4Ui" eventType="touchUpInside" id="eTC-KM-vQv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PC-kX-ypN">
+                                <rect key="frame" x="191" y="433" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="Stop:" destination="SKt-gB-4Ui" eventType="touchUpInside" id="Vi5-ng-ysM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-Vk-MpX">
+                                <rect key="frame" x="192" y="543" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="Play:" destination="SKt-gB-4Ui" eventType="touchUpInside" id="ATC-2B-QSs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hzQ-QY-OIr" firstAttribute="leading" secondItem="zAS-82-AQc" secondAttribute="leading" constant="24" id="00q-fX-k13"/>
+                            <constraint firstItem="2PC-kX-ypN" firstAttribute="centerY" secondItem="mlu-Iq-OxU" secondAttribute="centerY" id="0y0-sG-ICz"/>
+                            <constraint firstItem="4lz-Vk-MpX" firstAttribute="top" secondItem="2PC-kX-ypN" secondAttribute="bottom" constant="80" id="4EQ-yE-ciQ"/>
+                            <constraint firstItem="2PC-kX-ypN" firstAttribute="top" secondItem="soh-lm-rWz" secondAttribute="bottom" constant="80" id="77t-FV-P6g"/>
+                            <constraint firstItem="soh-lm-rWz" firstAttribute="centerX" secondItem="mlu-Iq-OxU" secondAttribute="centerX" id="K0a-cH-OhR"/>
+                            <constraint firstItem="hzQ-QY-OIr" firstAttribute="top" secondItem="zAS-82-AQc" secondAttribute="top" constant="60" id="ZIS-VV-Ib8"/>
+                            <constraint firstItem="4lz-Vk-MpX" firstAttribute="centerX" secondItem="mlu-Iq-OxU" secondAttribute="centerX" id="bhe-Fw-IRd"/>
+                            <constraint firstItem="2PC-kX-ypN" firstAttribute="centerX" secondItem="mlu-Iq-OxU" secondAttribute="centerX" id="d6g-Ck-0f4"/>
+                            <constraint firstItem="zAS-82-AQc" firstAttribute="trailing" secondItem="hzQ-QY-OIr" secondAttribute="trailing" constant="20" id="ihh-Bg-a8J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zAS-82-AQc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Record" image="mic" id="BbI-p5-2cZ"/>
+                    <connections>
+                        <outlet property="PlayButton" destination="4lz-Vk-MpX" id="Zrq-Tb-peX"/>
+                        <outlet property="RecordButton" destination="soh-lm-rWz" id="nqa-cF-3KZ"/>
+                        <outlet property="StopButton" destination="2PC-kX-ypN" id="sPe-nS-T4b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3D-1R-0Et" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="970.98214285714278"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="RecipeLearner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xat-ty-sR3">
+                                <rect key="frame" x="91" y="422.5" width="232" height="51"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <state key="normal" title="Watch a Tutorial"/>
+                                <connections>
+                                    <action selector="WatchVideo:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="xwe-Xl-7x7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xat-ty-sR3" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="OqV-cB-cIq"/>
+                            <constraint firstItem="Xat-ty-sR3" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="nqA-zL-lzU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="youtube" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="SKt-gB-4Ui" kind="relationship" relationship="viewControllers" id="tVi-qX-Awe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bowl" width="30" height="30"/>
+        <image name="mic" width="30" height="30"/>
+        <image name="youtube" width="30" height="30"/>
+    </resources>
+</document>
