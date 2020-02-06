@@ -31,7 +31,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Spf-cq-GkS" firstAttribute="top" secondItem="La7-My-Hap" secondAttribute="bottom" constant="68" id="4Lx-zz-EJg"/>
+                            <constraint firstItem="Spf-cq-GkS" firstAttribute="top" secondItem="La7-My-Hap" secondAttribute="bottom" priority="250" constant="68" id="4Lx-zz-EJg"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Spf-cq-GkS" secondAttribute="bottom" constant="30" id="AzT-Iv-qyh"/>
                             <constraint firstItem="La7-My-Hap" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="Imz-ky-5Pm"/>
                             <constraint firstItem="Spf-cq-GkS" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Knu-nu-f4f"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="La7-My-Hap" secondAttribute="trailing" id="UHE-xc-KDa"/>
@@ -58,14 +59,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a Recording for Instructions Later" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzQ-QY-OIr">
-                                <rect key="frame" x="24" y="104" width="370" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a Recording for Instructions Later" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzQ-QY-OIr">
+                                <rect key="frame" x="22.5" y="64" width="369.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soh-lm-rWz">
-                                <rect key="frame" x="182.5" y="323" width="49" height="30"/>
+                                <rect key="frame" x="182.5" y="363" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
                                     <action selector="Record:" destination="SKt-gB-4Ui" eventType="touchUpInside" id="eTC-KM-vQv"/>
@@ -79,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-Vk-MpX">
-                                <rect key="frame" x="192" y="543" width="30" height="30"/>
+                                <rect key="frame" x="192" y="503" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="Play:" destination="SKt-gB-4Ui" eventType="touchUpInside" id="ATC-2B-QSs"/>
@@ -88,15 +89,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hzQ-QY-OIr" firstAttribute="leading" secondItem="zAS-82-AQc" secondAttribute="leading" constant="24" id="00q-fX-k13"/>
+                            <constraint firstItem="zAS-82-AQc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hzQ-QY-OIr" secondAttribute="trailing" priority="750" constant="22" id="0nL-aP-MQ7"/>
                             <constraint firstItem="2PC-kX-ypN" firstAttribute="centerY" secondItem="mlu-Iq-OxU" secondAttribute="centerY" id="0y0-sG-ICz"/>
-                            <constraint firstItem="4lz-Vk-MpX" firstAttribute="top" secondItem="2PC-kX-ypN" secondAttribute="bottom" constant="80" id="4EQ-yE-ciQ"/>
-                            <constraint firstItem="2PC-kX-ypN" firstAttribute="top" secondItem="soh-lm-rWz" secondAttribute="bottom" constant="80" id="77t-FV-P6g"/>
+                            <constraint firstItem="4lz-Vk-MpX" firstAttribute="top" secondItem="2PC-kX-ypN" secondAttribute="bottom" constant="40" id="4EQ-yE-ciQ"/>
+                            <constraint firstItem="2PC-kX-ypN" firstAttribute="top" secondItem="soh-lm-rWz" secondAttribute="bottom" constant="40" id="77t-FV-P6g"/>
+                            <constraint firstItem="hzQ-QY-OIr" firstAttribute="centerX" secondItem="mlu-Iq-OxU" secondAttribute="centerX" id="AgO-Er-0rz"/>
                             <constraint firstItem="soh-lm-rWz" firstAttribute="centerX" secondItem="mlu-Iq-OxU" secondAttribute="centerX" id="K0a-cH-OhR"/>
-                            <constraint firstItem="hzQ-QY-OIr" firstAttribute="top" secondItem="zAS-82-AQc" secondAttribute="top" constant="60" id="ZIS-VV-Ib8"/>
+                            <constraint firstItem="soh-lm-rWz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hzQ-QY-OIr" secondAttribute="bottom" priority="997" constant="10" id="K8V-6r-g9t"/>
                             <constraint firstItem="4lz-Vk-MpX" firstAttribute="centerX" secondItem="mlu-Iq-OxU" secondAttribute="centerX" id="bhe-Fw-IRd"/>
                             <constraint firstItem="2PC-kX-ypN" firstAttribute="centerX" secondItem="mlu-Iq-OxU" secondAttribute="centerX" id="d6g-Ck-0f4"/>
-                            <constraint firstItem="zAS-82-AQc" firstAttribute="trailing" secondItem="hzQ-QY-OIr" secondAttribute="trailing" constant="20" id="ihh-Bg-a8J"/>
+                            <constraint firstItem="hzQ-QY-OIr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zAS-82-AQc" secondAttribute="leading" priority="750" constant="22" id="evx-gj-HA4"/>
+                            <constraint firstItem="zAS-82-AQc" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4lz-Vk-MpX" secondAttribute="bottom" constant="20" id="hcY-iO-jtF"/>
+                            <constraint firstItem="hzQ-QY-OIr" firstAttribute="top" secondItem="zAS-82-AQc" secondAttribute="top" constant="20" id="uHG-Rq-AEx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zAS-82-AQc"/>
                     </view>
