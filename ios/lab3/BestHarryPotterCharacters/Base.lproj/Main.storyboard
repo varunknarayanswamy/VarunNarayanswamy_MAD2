@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Hm-an-BnB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="uah-M8-7wJ">
+            <objects>
+                <navigationController id="3Hm-an-BnB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Pw-wm-UuZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ClA-fu-GDD" kind="relationship" relationship="rootViewController" id="tT0-XA-Lfh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9v-dP-klU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-211" y="178"/>
+        </scene>
+        <!--Best HP Characters-->
+        <scene sceneID="htz-AR-XnP">
+            <objects>
+                <collectionViewController id="ClA-fu-GDD" customClass="HarryPotterAlbumImages" customModule="BestHarryPotterCharacters" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PLu-hh-BdB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RsO-Ss-xD3">
+                            <size key="itemSize" width="97" height="84"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="oFC-GA-6zt" customClass="CollectionViewImageCell" customModule="BestHarryPotterCharacters" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="97" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TGf-LG-Ruf">
+                                    <rect key="frame" x="0.0" y="0.0" width="97" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-eD-R8j">
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="84"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Icx-eD-R8j" secondAttribute="trailing" id="5If-9h-FNE"/>
+                                        <constraint firstItem="Icx-eD-R8j" firstAttribute="leading" secondItem="TGf-LG-Ruf" secondAttribute="leading" id="6Nh-bS-Qzs"/>
+                                        <constraint firstItem="Icx-eD-R8j" firstAttribute="top" secondItem="TGf-LG-Ruf" secondAttribute="top" id="Ykt-Bm-btL"/>
+                                        <constraint firstAttribute="bottom" secondItem="Icx-eD-R8j" secondAttribute="bottom" id="tFA-lX-PjR"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="97" height="84"/>
+                                <connections>
+                                    <outlet property="HarryPotterImage" destination="Icx-eD-R8j" id="cmh-0N-K4b"/>
+                                    <segue destination="sJ7-Rf-lLz" kind="show" identifier="showImage" id="sLy-WU-lBm"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="513-lP-L8W" customClass="HarryPotterTitle" customModule="BestHarryPotterCharacters" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRy-BF-Ccg">
+                                    <rect key="frame" x="8" y="8" width="398" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="zRy-BF-Ccg" secondAttribute="trailing" id="6xs-8x-xca"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="zRy-BF-Ccg" secondAttribute="bottom" id="EfZ-Ry-l6J"/>
+                                <constraint firstItem="zRy-BF-Ccg" firstAttribute="leading" secondItem="513-lP-L8W" secondAttribute="leadingMargin" id="bht-Qx-4ZT"/>
+                                <constraint firstItem="zRy-BF-Ccg" firstAttribute="top" secondItem="513-lP-L8W" secondAttribute="topMargin" id="oGk-bd-2Gn"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="titleLabel" destination="zRy-BF-Ccg" id="WWi-TH-ekq"/>
+                            </connections>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Footer" id="gAm-L9-3Ao" customClass="HarryPotterFooter" customModule="BestHarryPotterCharacters" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="134" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc9-1U-eaL">
+                                    <rect key="frame" x="8" y="8" width="398" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="cc9-1U-eaL" secondAttribute="trailing" id="HbO-sn-Itb"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="cc9-1U-eaL" secondAttribute="bottom" id="p1A-bM-ST0"/>
+                                <constraint firstItem="cc9-1U-eaL" firstAttribute="top" secondItem="gAm-L9-3Ao" secondAttribute="topMargin" id="weX-AC-lYh"/>
+                                <constraint firstItem="cc9-1U-eaL" firstAttribute="leading" secondItem="gAm-L9-3Ao" secondAttribute="leadingMargin" id="yOK-dv-nHC"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="footer" destination="cc9-1U-eaL" id="Z8p-2P-UEl"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="ClA-fu-GDD" id="B5Q-Ct-6XI"/>
+                            <outlet property="delegate" destination="ClA-fu-GDD" id="S7d-Ls-UOs"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Best HP Characters" id="jzZ-KY-FDZ">
+                        <barButtonItem key="backBarButtonItem" title="Return" id="ZYd-Bi-pJw"/>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkh-zg-jUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591.304347826087" y="172.76785714285714"/>
+        </scene>
+        <!--Individual Image View-->
+        <scene sceneID="pJf-cS-FWb">
+            <objects>
+                <viewController id="sJ7-Rf-lLz" customClass="IndividualImageView" customModule="BestHarryPotterCharacters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yAo-dt-GdS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zOj-Y5-6VA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fsw-lB-KF1" firstAttribute="trailing" secondItem="zOj-Y5-6VA" secondAttribute="trailing" id="UXM-A6-Bgh"/>
+                            <constraint firstItem="zOj-Y5-6VA" firstAttribute="top" secondItem="fsw-lB-KF1" secondAttribute="top" id="d5Q-vb-PZB"/>
+                            <constraint firstItem="fsw-lB-KF1" firstAttribute="bottom" secondItem="zOj-Y5-6VA" secondAttribute="bottom" id="eKO-yR-rED"/>
+                            <constraint firstItem="zOj-Y5-6VA" firstAttribute="leading" secondItem="fsw-lB-KF1" secondAttribute="leading" id="w24-Kl-mUf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fsw-lB-KF1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kdb-HN-ZIN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="93u-Wc-mm2">
+                            <connections>
+                                <action selector="shareImage:" destination="sJ7-Rf-lLz" id="VvH-C2-JWV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="largerImage" destination="zOj-Y5-6VA" id="Al0-aX-2pc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPD-s0-jfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="168"/>
+        </scene>
+    </scenes>
+</document>
