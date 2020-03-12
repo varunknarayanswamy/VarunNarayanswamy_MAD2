@@ -71,7 +71,9 @@ class getOutTimeTableview: UITableViewController, CLLocationManagerDelegate {
                     }
                     let alert = UIAlertController(title: "Time to go!", message: "It's time to go!  \(TimeFormattedString) \(globalItems) and \(specificItems) for this trip.", preferredStyle: .alert)
                     let next  = UIAlertAction(title: "next", style: .default, handler: { [unowned alert] _ in
+                        if (CLLocationCoordinate2DIsValid(self.coordinates)){
                         self.weatherAPI.getAPICall(lat: String(format: "%f", self.coordinates.latitude), long: String(format: "%f", self.coordinates.longitude))
+                        }
                     })
                     alert.addAction(next)
                     present(alert, animated: true, completion: nil)
