@@ -28,6 +28,9 @@ class BookRepository(val app: Application) {
 
     init{
         service = retrofit.create(GoogleBooksService::class.java)
+        CoroutineScope(Dispatchers.IO).launch {
+            getBookList("Harry Potter")
+        }
     }
 
     val searchTermEntered = Observer<String> {
@@ -48,7 +51,7 @@ class BookRepository(val app: Application) {
                 Log.i(LOG_TAG, responseBody.toString())
                 bookDetails.postValue(responseBody?.items?.toList())
             }else{
-                Log.e(LOG_TAG, "Could not search recipes")
+                Log.e(LOG_TAG, "Could not search books")
             }
         }
     }
