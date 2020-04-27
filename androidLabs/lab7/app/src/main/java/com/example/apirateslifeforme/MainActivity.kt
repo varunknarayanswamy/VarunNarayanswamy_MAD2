@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         pirateVM.pirateList.observe(this, Observer {
+            for (piratemember in it){
+                Log.i("current pirates", piratemember.pirateName)
+            }
             adapter.pirateList = it
             adapter.notifyDataSetChanged()
         })

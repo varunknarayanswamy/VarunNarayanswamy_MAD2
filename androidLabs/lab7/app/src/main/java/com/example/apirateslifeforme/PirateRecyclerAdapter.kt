@@ -1,5 +1,6 @@
 package com.example.apirateslifeforme
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +23,6 @@ class PirateRecyclerAdapter(var pirateList: List<PirateMember>) : RecyclerView.A
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int){
         val currentItem = pirateList[position]
-
         holder.pirateName.text = currentItem.pirateName
         holder.position.text = currentItem.piratePosition
     }
