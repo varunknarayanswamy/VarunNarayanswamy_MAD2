@@ -21,4 +21,10 @@ class PirateRepository(val app: Application) {
         }
     }
 
+    fun removePirateFromCrew(id: Int) {
+        CoroutineScope(Dispatchers.IO).launch {
+            pirateDAO.removePirate(id)
+        }
+    }
+
 }

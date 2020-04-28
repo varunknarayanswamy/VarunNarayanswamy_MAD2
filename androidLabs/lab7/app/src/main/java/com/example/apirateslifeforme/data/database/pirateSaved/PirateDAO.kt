@@ -14,4 +14,7 @@ interface PirateDAO {
 
     @Query("SELECT * FROM pirate_table")
     fun getAllPirates():LiveData<List<PirateMember>>
+
+    @Query("DELETE FROM pirate_table WHERE pirate_id = :id")
+    fun removePirate(id: Int)
 }

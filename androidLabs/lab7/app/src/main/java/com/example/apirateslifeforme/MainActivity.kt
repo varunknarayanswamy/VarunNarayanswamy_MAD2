@@ -12,7 +12,7 @@ import com.example.apirateslifeforme.data.models.PirateMember
 import com.example.apirateslifeforme.data.pirateViewModel
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), PirateRecyclerAdapter.PirateItemListener {
 
     private lateinit var pirateVM: pirateViewModel
     private lateinit var pirateRecyclerView: RecyclerView
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         pirateNameInput = this.findViewById(R.id.pirateName)
         positionInput = this.findViewById(R.id.piratePosition)
         pirateButton = this.findViewById(R.id.pirateButton)
-        adapter = PirateRecyclerAdapter(emptyList<PirateMember>())
+        adapter = PirateRecyclerAdapter(emptyList<PirateMember>(), this)
         pirateRecyclerView.adapter = adapter
 
         pirateButton.setOnClickListener {
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         pirateVM.pirateList.observe(this, Observer {
             for (piratemember in it){
-                Log.i("current pirates", piratemember.pirateName)
+                Log.i("current pirates", piratemember.toString())
             }
             adapter.pirateList = it
             adapter.notifyDataSetChanged()
@@ -46,9 +46,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addPirate(){
-        Log.i("add pirate", "add Pirate function")
-        val date = Calendar.getInstance().time
-        pirateVM.addPirate(PirateMember(0,"Luffy","Captain", date,0))
+        val pirateName = pirateNameInput.text.toString()
+        val position = positionInput.text.toString()
+        if (pirateName != null && pirateName != "" && position != null && position != "")
+        {
+            val date = Calendar.getInstance().time
+            pirateVM.addPirate(PirateMember(adapter.pirateList.size,pirateName,position, date,adapter.pirateList.size))
+            Log.i("add pirate", "add Pirate function")
+        }
+    }
+
+    override fun onMemberClicked(member_id: Int) {
+        pirateVM.removePirate(member_id)
     }
 
 }

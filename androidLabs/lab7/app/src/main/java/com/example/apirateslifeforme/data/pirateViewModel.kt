@@ -33,4 +33,6 @@ class pirateViewModel(app: Application): AndroidViewModel(app) {
         pirateRepo.addCrewmate(pirate)
     }
 
+    fun removePirate(id: Int) = pirateRepo.removePirateFromCrew(id)
+
 }
