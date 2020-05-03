@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/currentBookList">
+    <fragment
+        android:id="@+id/currentBookList"
+        android:name="com.example.logyourlegends.ui.CurrentBooks.CurrentBooks"
+        android:label="fragment_current_books"
+        tools:layout="@layout/fragment_current_books" >
+        <action
+            android:id="@+id/action_currentBooks_to_searchBooks"
+            app:destination="@id/searchBooks" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedBooks"
+        android:name="com.example.logyourlegends.ui.CompletedBooks.CompletedBooks"
+        android:label="fragment_completed_books"
+        tools:layout="@layout/fragment_completed_books" />
+    <fragment
+        android:id="@+id/searchBooks"
+        android:name="com.example.logyourlegends.ui.searchBooks.searchBooks"
+        android:label="fragment_search_books"
+        tools:layout="@layout/fragment_search_books" />
+</navigation>
