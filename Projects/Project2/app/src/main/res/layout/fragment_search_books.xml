@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/SearchRecyclerView"
+        android:id="@+id/bookSearchRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
@@ -41,7 +41,7 @@
         android:ems="10"
         android:hint="@string/search_a_book_name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/SearchRecyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/bookSearchRecyclerView"
         app:layout_constraintEnd_toStartOf="@+id/searchButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -54,7 +54,7 @@
         android:background="#8D00BCD4"
         android:text="@string/search"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toTopOf="@+id/SearchRecyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/bookSearchRecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

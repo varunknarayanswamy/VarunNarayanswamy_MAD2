@@ -16,14 +16,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.logyourlegends.R
 import com.example.logyourlegends.data.LOG_TAG
 import com.example.logyourlegends.data.models.Book
+import com.example.logyourlegends.data.models.BookChosen
+import com.example.logyourlegends.ui.CurrentBooks.CurrentBooksViewModel
 import com.example.logyourlegends.ui.adapters.BookSearchAdapter
 import kotlinx.android.synthetic.main.fragment_search_books.*
+import java.util.*
 
 class searchBooks : Fragment(), BookSearchAdapter.BookItemListener {
 
     private lateinit var searchEditText: EditText
     private lateinit var searchRecyclerView: RecyclerView
     private lateinit var searchVM: SearchBooksViewModel
+    private lateinit var currentVM: CurrentBooksViewModel
     private lateinit var navController: NavController
     private lateinit var searchButton: Button
     private lateinit var adapter: BookSearchAdapter
@@ -35,12 +39,12 @@ class searchBooks : Fragment(), BookSearchAdapter.BookItemListener {
     ): View? {
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
         searchVM = ViewModelProvider(requireActivity()).get(SearchBooksViewModel::class.java)
-
+        currentVM = ViewModelProvider(requireActivity()).get(CurrentBooksViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_search_books, container, false)
+        searchRecyclerView = root.findViewById(R.id.bookSearchRecyclerView)
         searchEditText = root.findViewById(R.id.searchEditText)
-        searchRecyclerView = root.findViewById(R.id.SearchRecyclerView)
         adapter = BookSearchAdapter(requireContext(), emptyList<Book>(), this)
-        SearchRecyclerView.adapter = adapter
+        searchRecyclerView.adapter = adapter
         searchButton = root.findViewById(R.id.searchButton)
 
 
@@ -65,7 +69,7 @@ class searchBooks : Fragment(), BookSearchAdapter.BookItemListener {
     }
 
     override fun onBookItemClick(book: Book) {
-        Log.i(LOG_TAG, "On Book Click")
+        searchVM.selectedBook.value = book
+        navController.navigate(R.id.action_searchBooks_to_bookDetails)
     }
-
 }

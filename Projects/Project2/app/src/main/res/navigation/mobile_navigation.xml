@@ -22,5 +22,18 @@
         android:id="@+id/searchBooks"
         android:name="com.example.logyourlegends.ui.searchBooks.searchBooks"
         android:label="fragment_search_books"
-        tools:layout="@layout/fragment_search_books" />
+        tools:layout="@layout/fragment_search_books" >
+        <action
+            android:id="@+id/action_searchBooks_to_bookDetails"
+            app:destination="@id/bookDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetails"
+        android:name="com.example.logyourlegends.ui.details.bookDetails"
+        android:label="fragment_book_details"
+        tools:layout="@layout/fragment_book_details" >
+        <action
+            android:id="@+id/action_bookDetails_to_currentBookList"
+            app:destination="@id/currentBookList" />
+    </fragment>
 </navigation>

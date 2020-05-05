@@ -7,10 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.logyourlegends.R
-import com.example.logyourlegends.data.models.bookChosen
-import kotlinx.android.synthetic.main.book_list_items.view.*
+import com.example.logyourlegends.data.models.BookChosen
 
-class BookListAdapter(val context: Context, var bookList: List <bookChosen>, val itemListener: BookItemListener): RecyclerView.Adapter<BookListAdapter.ViewHolder>() {
+class BookListAdapter(val context: Context, var bookList: List <BookChosen>, val itemListener: BookItemListener): RecyclerView.Adapter<BookListAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val bookNameText = itemView.findViewById<TextView>(R.id.bookName)
@@ -32,9 +31,10 @@ class BookListAdapter(val context: Context, var bookList: List <bookChosen>, val
         holder.authorText.text = curBook.author
     }
 
+    interface BookItemListener{
+        fun onCurrentBookClick(bookChosen: BookChosen)
+    }
+
 
 }
 
-interface BookItemListener{
-
-}

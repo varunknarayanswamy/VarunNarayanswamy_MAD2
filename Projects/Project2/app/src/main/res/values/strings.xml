@@ -12,4 +12,6 @@
     <string name="add">add</string>
     <string name="search_a_book_name">Search a book name</string>
     <string name="search">search</string>
+    <string name="authors">Authors:</string>
+    <string name="pages">Pages:</string>
 </resources>
