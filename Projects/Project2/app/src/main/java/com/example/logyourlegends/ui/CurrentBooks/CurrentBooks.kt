@@ -56,6 +56,12 @@ class CurrentBooks : Fragment(), BookListAdapter.BookItemListener {
     }
 
     override fun onCurrentBookClick(bookChosen: BookChosen) {
-        Log.i(LOG_TAG,"Current book pressed")
+        Log.i(LOG_TAG, "current clicked")
+        currentVM.selectedCurrentBook.value = bookChosen
+        navController.navigate(R.id.action_currentBookList_to_bookLogging)
+    }
+
+    override fun onBookLongClicked(bookChosenID: Int) {
+        currentVM.removeCurrent(bookChosenID)
     }
 }

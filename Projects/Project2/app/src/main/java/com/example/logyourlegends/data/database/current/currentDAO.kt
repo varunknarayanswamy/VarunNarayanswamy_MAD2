@@ -12,4 +12,7 @@ interface currentDAO {
 
     @Query("SELECT * FROM current_table")
     fun getAllCurrent(): LiveData<List<current>>
+
+    @Query("DELETE FROM current_table WHERE current_id = :id")
+    fun removeCurrent(id: Int)
 }

@@ -9,7 +9,7 @@ import com.example.logyourlegends.data.repos.BookRepository
 class SearchBooksViewModel(app: Application): AndroidViewModel(app) {
     private val bookRepo = BookRepository(app)
     val bookDetails = bookRepo.bookDetails
-    val selectedBook = MutableLiveData<Book>()
+    val selectedSearchBook = MutableLiveData<Book>()
     val searchUserInput = MutableLiveData<String>()
 
     init {

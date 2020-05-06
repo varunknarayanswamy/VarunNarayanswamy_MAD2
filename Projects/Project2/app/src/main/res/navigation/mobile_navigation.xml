@@ -7,21 +7,24 @@
     <fragment
         android:id="@+id/currentBookList"
         android:name="com.example.logyourlegends.ui.CurrentBooks.CurrentBooks"
-        android:label="fragment_current_books"
+        android:label="Current Books"
         tools:layout="@layout/fragment_current_books" >
         <action
             android:id="@+id/action_currentBooks_to_searchBooks"
             app:destination="@id/searchBooks" />
+        <action
+            android:id="@+id/action_currentBookList_to_bookLogging"
+            app:destination="@id/bookLogging" />
     </fragment>
     <fragment
         android:id="@+id/completedBooks"
         android:name="com.example.logyourlegends.ui.CompletedBooks.CompletedBooks"
-        android:label="fragment_completed_books"
+        android:label="Completed Books"
         tools:layout="@layout/fragment_completed_books" />
     <fragment
         android:id="@+id/searchBooks"
         android:name="com.example.logyourlegends.ui.searchBooks.searchBooks"
-        android:label="fragment_search_books"
+        android:label="Search"
         tools:layout="@layout/fragment_search_books" >
         <action
             android:id="@+id/action_searchBooks_to_bookDetails"
@@ -30,10 +33,19 @@
     <fragment
         android:id="@+id/bookDetails"
         android:name="com.example.logyourlegends.ui.details.bookDetails"
-        android:label="fragment_book_details"
+        android:label="Details"
         tools:layout="@layout/fragment_book_details" >
         <action
             android:id="@+id/action_bookDetails_to_currentBookList"
+            app:destination="@id/currentBookList" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookLogging"
+        android:name="com.example.logyourlegends.ui.CurrentBooks.bookLogging"
+        android:label="Log Your Reading!"
+        tools:layout="@layout/fragment_book_logging" >
+        <action
+            android:id="@+id/action_bookLogging_to_currentBookList"
             app:destination="@id/currentBookList" />
     </fragment>
 </navigation>

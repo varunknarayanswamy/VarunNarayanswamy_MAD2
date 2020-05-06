@@ -19,7 +19,6 @@ class BookSearchAdapter(val context: Context, var bookList: List<Book>, val item
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        Log.i(LOG_TAG,"what is going on")
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.book_search_item, parent, false)
         return ViewHolder(view)

@@ -6,7 +6,7 @@ import java.util.*
 
 @Entity(tableName = "current_table")
 data class current (
-    @PrimaryKey val current_id: Int,
+    @PrimaryKey(autoGenerate = true) val current_id: Int = 0,
     val title: String,
     val Author: String?,
     val pages: Int?,

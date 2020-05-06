@@ -6,7 +6,7 @@ import java.util.*
 
 @Entity(tableName = "complete_table")
 data class complete (
-    @PrimaryKey val complete_id: Int,
+    @PrimaryKey(autoGenerate = true) val complete_id: Int= 0,
     val title: String,
     val Author: String?,
     val pages: Int?,

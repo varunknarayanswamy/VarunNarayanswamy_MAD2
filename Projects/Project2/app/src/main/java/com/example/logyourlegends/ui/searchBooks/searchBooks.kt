@@ -16,11 +16,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.logyourlegends.R
 import com.example.logyourlegends.data.LOG_TAG
 import com.example.logyourlegends.data.models.Book
-import com.example.logyourlegends.data.models.BookChosen
 import com.example.logyourlegends.ui.CurrentBooks.CurrentBooksViewModel
 import com.example.logyourlegends.ui.adapters.BookSearchAdapter
-import kotlinx.android.synthetic.main.fragment_search_books.*
-import java.util.*
 
 class searchBooks : Fragment(), BookSearchAdapter.BookItemListener {
 
@@ -69,7 +66,7 @@ class searchBooks : Fragment(), BookSearchAdapter.BookItemListener {
     }
 
     override fun onBookItemClick(book: Book) {
-        searchVM.selectedBook.value = book
+        searchVM.selectedSearchBook.value = book
         navController.navigate(R.id.action_searchBooks_to_bookDetails)
     }
 }

@@ -14,4 +14,13 @@
     <string name="search">search</string>
     <string name="authors">Authors:</string>
     <string name="pages">Pages:</string>
+    <string name="choose_an_end_date">Choose an end date:</string>
+    <string name="choose_a_start_date">Choose a start date:</string>
+    <string name="pick_an_end_date">Pick an End Date:</string>
+    <string name="log_pages">Log Pages:</string>
+    <string name="how_many_pages_did_you_read">How Many Pages did you read?</string>
+    <string name="savechanges">saveChanges</string>
+    <string name="remaining_time_till_goal_date">Remaining Time till Goal Date:</string>
+    <string name="remaining_pages">Remaining Pages:</string>
+    <string name="goal_date">Goal Date:</string>
 </resources>

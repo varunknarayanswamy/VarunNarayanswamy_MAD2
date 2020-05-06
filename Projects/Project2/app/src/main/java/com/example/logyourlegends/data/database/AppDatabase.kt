@@ -12,7 +12,7 @@ import com.example.logyourlegends.data.database.current.currentDAO
 
 
 @Database(entities = [current::class, complete::class],
-    version = 2,
+    version = 3,
     exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDatabase: RoomDatabase() {

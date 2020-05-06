@@ -23,4 +23,10 @@ class CompleteRepository(val app: Application) {
             completeDAO.insertComplete(BookChosen.getRoomComplete())
         }
     }
+
+    fun removeComplete(id: Int){
+        CoroutineScope(Dispatchers.IO).launch {
+            completeDAO.removeComplete(id)
+        }
+    }
 }
