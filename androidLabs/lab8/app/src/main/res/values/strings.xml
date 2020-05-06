@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">APiratesLifeForMe</string>
+    <string name="pirate_name">pirate name</string>
+    <string name="crew_position">crew position</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="apirateslifeforme">APiratesLifeForMe</string>
+    <string name="a_pirates_life_for_me">A Pirates Life For Me!</string>
+</resources>

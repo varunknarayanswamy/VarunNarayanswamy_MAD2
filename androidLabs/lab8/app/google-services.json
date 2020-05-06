@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1057019651460",
+    "firebase_url": "https://piratecrewandroid.firebaseio.com",
+    "project_id": "piratecrewandroid",
+    "storage_bucket": "piratecrewandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057019651460:android:45dd67330bfac4f561a9d1",
+        "android_client_info": {
+          "package_name": "com.example.apirateslifeforme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057019651460-3t859208s2tdhhpe0jjqt8k5vdfu842t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6PYrSoZlb8RBT7LGltzEUCweIP7SdQaA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057019651460-3t859208s2tdhhpe0jjqt8k5vdfu842t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
